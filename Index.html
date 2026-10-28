@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telangana SBTET Results</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #172554;
+    }
+
+    header {
+      background: #123b75;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 26px;
+    }
+
+    header p {
+      margin: 0;
+    }
+
+    main {
+      max-width: 480px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px #00000012;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      font-weight: bold;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 7px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input, select {
+      border: 1px solid #cbd5e1;
+      background: white;
+    }
+
+    button {
+      border: none;
+      background: #1764c0;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 22px;
+    }
+
+    button:hover {
+      background: #104b94;
+    }
+
+    #message {
+      margin-top: 18px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      text-align: center;
+      color: #64748b;
+      padding: 15px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Telangana SBTET Results</h1>
+    <p>Diploma Examination Results Portal</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Check Your Results</h2>
+
+      <form id="resultForm">
+        <label for="pin">Student PIN</label>
+        <input
+          id="pin"
+          type="text"
+          placeholder="Enter your PIN"
+          required
+        >
+
+        <label for="scheme">Scheme</label>
+        <select id="scheme" required>
+          <option value="">Select scheme</option>
+          <option value="C-16">C-16</option>
+          <option value="C-18">C-18</option>
+          <option value="C-21">C-21</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="semester">Semester</label>
+        <select id="semester" required>
+          <option value="">Select semester</option>
+          <option value="1">1st Semester</option>
+          <option value="2">2nd Semester</option>
+          <option value="3">3rd Semester</option>
+          <option value="4">4th Semester</option>
+          <option value="5">5th Semester</option>
+          <option value="6">6th Semester</option>
+        </select>
+
+        <label for="year">Exam Year</label>
+        <input
+          id="year"
+          type="number"
+          min="2000"
+          max="2100"
+          placeholder="Example: 2026"
+          required
+        >
+
+        <button type="submit">Check Results</button>
+      </form>
+
+      <p id="message" role="status">
+        Enter your details to continue.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    Independent student project. Not an official SBTET website.
+  </footer>
+
+  <script>
+    document.getElementById("resultForm").addEventListener(
+      "submit",
+      function(event) {
+        event.preventDefault();
+
+        document.getElementById("message").textContent =
+          "Your form is working, but live results are not connected yet. " +
+          "An authorized SBTET data connection is required to retrieve " +
+          "official marks. Please use the official SBTET results portal " +
+          "to verify your marks.";
+      }
+    );
+  </script>
+</body>
+    </html>
+    
